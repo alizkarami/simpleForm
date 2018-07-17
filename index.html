@@ -26,16 +26,86 @@
 	</header>
 <main>
 	<form id="student-profile">
-		
+		<fieldset>
+			<legend>Name</legend>
+			<div class="form-center">
+				<div>
+					<label>First Name: </label>
+					<input class="form-item" type="text" name="fn" placeholder="First Name">
+				</div>
+				<div>
+					<label>Last Name: </label>
+					<input class="form-item" type="text" name="ln" placeholder="Last Name">
+				</div>
+				<div>
+					<label>Student #: </label>
+					<input class="form-item" type="text" name="stn" placeholder="Student Number">
+				</div>
+				<div>
+					<label>E-mail: </label>
+					<input class="form-item" type="text" name="email" placeholder="Email">
+				</div>
+			</div>
+		</fieldset>
 		<fieldset>
 			<legend>Satus in Canada</legend>
-			<ul>
-                    <li><input type="radio" name="salutation" id="Ms" value="Ms"><label for="Ms">Miss</label></li>
-                    <li><input type="radio" name="salutation" id="Mrs" value="Mrs"><label for="Mrs">Mrs.</label></li>
-                    <li><input type="radio" name="salutation" id="Mr" value="Mr"><label for="Mr">Mr.</label></li>
-                </ul>
+			<div class="form-center">
+				<label>Status in Canada: </label>
+				<select class="form-item" id="status_in_canada">
+					<option value="">select your status</option>
+					<option value="domestic">Domestic</option>
+					<option value="international">International</option>
+				</select>
+			</div>
+			
 		</fieldset>
-
+		<fieldset>
+			<legend>Major</legend>
+			<div class="form-center">
+				<label>
+				  <input class="degree-program" type="radio" name="degree" id="ug" value="ug"> Under Graduate
+				</label>
+				<label>
+				  <input class="degree-program" type="radio" name="degree" id="g" value="g"> Gradaute
+				</label>
+				<label>
+				  <input class="degree-program" type="radio" name="degree" id="nd" value="nd"> Non-Degree program
+				</label>
+			</div>
+			<div>
+				<section  class="program-desc display-none" id="non-degree">
+					<h3>Non-Degree Studies</h3>
+					<p>Non-Degree Studies provides study options for unclassified, visiting and access studies students studying outside a UBC degree program.</p>
+					<p>Visiting, unclassified, and Access Studies students are part of Non-Degree Studies, which is for students taking UBC courses without pursuing a UBC degree. Non-Degree Studies is an option for you if:</p>
+					<ul>
+						<li>You have already completed a degree</li>
+						<li>You are completing an undergraduate degree at another institution</li>
+						<li>You want to take courses through distance education outside of a degree program</li>
+						<li>You want to take a course for professional upgrading</li>
+					</ul>
+				</section>
+				<section  class="program-desc display-none" id="u-grad">
+					<h3>Undergraduate Programs</h3>
+					<p>Similar programs may have different names at different campuses. Try the search function for more comprehensive results.</p>
+					<p>Every effort is made to keep the information on this page current and accurate. However, in the rare event of a discrepancy between the information on this page and the calendar and/or program listing of the academic division, the divisional information is considered authoritative. Official calendars and course information can be found on the websites of each division/faculty (i.e., Applied Science and Engineering, Daniels Faculty of Architecture, Landscape and Design, Arts and Science, Kinesiology and Physical Education, Music, UTM, UTSC).</p>
+				</section>
+				<section  class="program-desc display-none" id="grad">
+					<h3>Graduate Programs</h3>
+					<p>Dive into your interests and develop your passions at U of T. We offer over 700 undergraduate and 200 graduate programs across three campuses in the Greater Toronto Area. From architecture to medicine, music to urban studies, we've got what you're looking for. </p>
+					<p>
+						The university makes every effort to keep this program list up to date. However, in the event of a conflict between the programs listed in a University of Toronto Academic Calendar and this list, the Calendar shall prevail. If you have any further questions about admissions and program offerings, please contact Enrolment Services. To update a program listing, please contact us via our Site Feedback form.
+					</p>
+				</section>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Research Interests</legend>
+			<div class="form-center">
+				<textarea class="form-item" name="research_interests" rows="5" placeholder="Research Interests"></textarea>
+			</div>
+			
+		</fieldset>
+		<button type="submit">Submit</button>
 	</form>
 	
 </main>

@@ -23,7 +23,7 @@ document.addEventListener('click', function(e) {
 
 
     // toggle show and hide each section
-    if (this_class === 'degree-program') {
+    if (this_class === 'form degree-program') {
     	const clicke_id = target.id;
     	toggleShowByClass('program-desc', 'none');
     	if (clicke_id === 'g') {
@@ -36,3 +36,27 @@ document.addEventListener('click', function(e) {
     }
     
 }, false);
+
+
+
+let validateForm = (function(){
+    const fields = document.querySelectorAll('.form');
+    
+    function feildsCheck () {
+        event.preventDefault();
+
+        console.log(fields);
+        fields.forEach(function(el){
+            //if (this.) {}
+            console.log(el.type);
+        });
+    } 
+
+    return {
+        initForm: function(userForm){
+            userForm.addEventListener("submit", feildsCheck);
+        }    
+    }
+
+
+})();

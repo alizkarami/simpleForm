@@ -25,25 +25,25 @@
 		</p>
 	</header>
 <main>
-	<form id="student-profile">
+	<form id="student-profile-form">
 		<fieldset>
 			<legend>Name</legend>
 			<div class="form-center">
 				<div>
 					<label>First Name: </label>
-					<input class="form-item" type="text" name="fn" placeholder="First Name">
+					<input class="form form-item" type="text" name="fn" placeholder="First Name">
 				</div>
 				<div>
 					<label>Last Name: </label>
-					<input class="form-item" type="text" name="ln" placeholder="Last Name">
+					<input class="form form-item" type="text" name="ln" placeholder="Last Name">
 				</div>
 				<div>
 					<label>Student #: </label>
-					<input class="form-item" type="text" name="stn" placeholder="Student Number">
+					<input class="form form-item" type="text" name="stn" placeholder="Student Number">
 				</div>
 				<div>
 					<label>E-mail: </label>
-					<input class="form-item" type="text" name="email" placeholder="Email">
+					<input class="form form-item" type="text" name="email" placeholder="Email">
 				</div>
 			</div>
 		</fieldset>
@@ -51,7 +51,7 @@
 			<legend>Satus in Canada</legend>
 			<div class="form-center">
 				<label>Status in Canada: </label>
-				<select class="form-item" id="status_in_canada">
+				<select class="form form-item" id="status_in_canada">
 					<option value="">select your status</option>
 					<option value="domestic">Domestic</option>
 					<option value="international">International</option>
@@ -63,13 +63,13 @@
 			<legend>Major</legend>
 			<div class="form-center">
 				<label>
-				  <input class="degree-program" type="radio" name="degree" id="ug" value="ug"> Under Graduate
+				  <input class="form degree-program" type="radio" name="degree" id="ug" value="ug"> Under Graduate
 				</label>
 				<label>
-				  <input class="degree-program" type="radio" name="degree" id="g" value="g"> Gradaute
+				  <input class="form degree-program" type="radio" name="degree" id="g" value="g"> Gradaute
 				</label>
 				<label>
-				  <input class="degree-program" type="radio" name="degree" id="nd" value="nd"> Non-Degree program
+				  <input class="form degree-program" type="radio" name="degree" id="nd" value="nd"> Non-Degree program
 				</label>
 			</div>
 			<div>
@@ -101,15 +101,19 @@
 		<fieldset>
 			<legend>Research Interests</legend>
 			<div class="form-center">
-				<textarea class="form-item" name="research_interests" rows="5" placeholder="Research Interests"></textarea>
+				<textarea class="form form-item" name="research_interests" rows="5" placeholder="Research Interests"></textarea>
 			</div>
 			
 		</fieldset>
-		<button type="submit">Submit</button>
+		<button id="submit" type="submit">Submit</button>
 	</form>
-	
+	<section id="errors"></section>
 </main>
 
 <script type="text/javascript" src="js/script.js"></script>
+
+<script>
+        validateForm.initForm(document.querySelector("#student-profile-form"));
+</script>
 </body>
 </html>

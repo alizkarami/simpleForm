@@ -13,12 +13,16 @@ body {
 header h1 {
 	text-align: center;
 }
+/*main style*/
 main {
 	margin-bottom: 25px;
 }
+/*button style added pointer*/
 button {
 	cursor: pointer;
 }
+
+/*fieldset style added nice border with shadow*/
 fieldset {
     overflow: hidden;
     -moz-box-shadow: 0 0 7px 0 rgba(0,0,0,0.32);
@@ -32,10 +36,13 @@ fieldset {
     min-height: 100px;
     margin-bottom: 25px;
 }
+
+/*fieldset legend*/
 fieldset legend {
 	padding: 0 3px;
 	font-weight: bold;
 }
+/*form item style*/
 .form-item {
     line-height: 1.5;
     background-color: #fff;
@@ -52,28 +59,43 @@ fieldset legend {
     font-size: 14px;
     display: inline-block;
 }
+/*center style for items*/
 .item-center {
 	margin-left: auto;
     margin-right: auto;
 }
+/*all label style here*/
 label {
     display: inline-block;
     max-width: 60%;
     margin: 0 5px;
     font-weight: bold;
 }
+/*make item in center*/
 .form-center {
 	text-align: center;
 	margin-top: 25px;
-}
+}/*div tag style center here*/
 .form-center div {
 	margin-bottom: 10px;
 	padding: 0 10px;
 }
+/*textarea style*/
 textarea {
 	height: auto !important;
 	width: 90% !important;
 }
+/*display none hides elements*/
 .display-none {
 	display: none;
+}
+/*error class style red color*/
+.error {
+    clear: left;
+    display: block;
+    color: red;
+}
+/*errors id block margin*/
+#errors {
+    margin: 15px;
 }

@@ -1,7 +1,7 @@
 {
   "name": "simpleform",
   "version": "1.0.0",
-  "description": "This is a simple Web Form that shows how AWESOME I am in Web Development. I am sure you would give me the maximum grade for this assignment because I deserve it!",
+  "description": "This is a simple Web Form that shows how AWESOME I am in Web Development.",
   "main": "index.js",
   "scripts": {
     "start": "npm run lite",

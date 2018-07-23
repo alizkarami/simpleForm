@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simple Web Form</title>
+
+	<!--Lato external font from google-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<!--Link to css stuff-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!--Header starts-->
 	<header>
 		<h1>Student Profile</h1>
 		<h2>Register here:</h2>
@@ -24,34 +28,42 @@
 			</ul>
 		</p>
 	</header>
+<!--Header ends-->
+
+<!--Main part of page-->
 <main>
+	<!--Form starts-->
 	<form id="student-profile-form">
+		<!--Name fields-->			<!-- hideErrorStyle js function to update style of errors message in the DOM-->
 		<fieldset>
 			<legend>Name</legend>
 			<div class="form-center">
 				<div>
 					<label>First Name: </label>
-					<input class="form form-item" type="text" name="fn" placeholder="First Name">
+					<input class="form form-item" type="text" name="fn" placeholder="First Name" oninput="hideErrorStyle(this)">
 				</div>
 				<div>
 					<label>Last Name: </label>
-					<input class="form form-item" type="text" name="ln" placeholder="Last Name">
+					<input class="form form-item" type="text" name="ln" placeholder="Last Name" oninput="hideErrorStyle(this)">
 				</div>
 				<div>
 					<label>Student #: </label>
-					<input class="form form-item" type="text" name="stn" placeholder="Student Number">
+					<input class="form form-item" type="text" name="stn" placeholder="Student Number" oninput="hideErrorStyle(this)">
 				</div>
 				<div>
 					<label>E-mail: </label>
-					<input class="form form-item" type="text" name="email" placeholder="Email">
+					<input class="form form-item" type="text" name="email" placeholder="Email" oninput="hideErrorStyle(this)">
 				</div>
 			</div>
 		</fieldset>
+
+		<!--Status in Canada-->
 		<fieldset>
-			<legend>Satus in Canada</legend>
+			<legend>Status in Canada</legend>
 			<div class="form-center">
 				<label>Status in Canada: </label>
-				<select class="form form-item" id="status_in_canada">
+				<!--select status-->
+				<select class="form form-item" id="status_in_canada" name="status_in_canada" oninput="hideErrorStyle(this)">
 					<option value="">select your status</option>
 					<option value="domestic">Domestic</option>
 					<option value="international">International</option>
@@ -59,61 +71,69 @@
 			</div>
 			
 		</fieldset>
+
+		<!--Major radio button-->
 		<fieldset>
 			<legend>Major</legend>
 			<div class="form-center">
 				<label>
-				  <input class="form degree-program" type="radio" name="degree" id="ug" value="ug"> Under Graduate
+				  <input class="form degree-program" type="radio" name="degree" id="ug" value="ug"  oninput="hideErrorStyle(this)"> Under Graduate
 				</label>
 				<label>
-				  <input class="form degree-program" type="radio" name="degree" id="g" value="g"> Gradaute
+				  <input class="form degree-program" type="radio" name="degree" id="g" value="g" oninput="hideErrorStyle(this)"> Gradaute
 				</label>
 				<label>
-				  <input class="form degree-program" type="radio" name="degree" id="nd" value="nd"> Non-Degree program
+				  <input class="form degree-program" type="radio" name="degree" id="nd" value="nd" oninput="hideErrorStyle(this)"> Non-Degree program
 				</label>
 			</div>
-			<div>
-				<section  class="program-desc display-none" id="non-degree">
-					<h3>Non-Degree Studies</h3>
-					<p>Non-Degree Studies provides study options for unclassified, visiting and access studies students studying outside a UBC degree program.</p>
-					<p>Visiting, unclassified, and Access Studies students are part of Non-Degree Studies, which is for students taking UBC courses without pursuing a UBC degree. Non-Degree Studies is an option for you if:</p>
-					<ul>
-						<li>You have already completed a degree</li>
-						<li>You are completing an undergraduate degree at another institution</li>
-						<li>You want to take courses through distance education outside of a degree program</li>
-						<li>You want to take a course for professional upgrading</li>
-					</ul>
-				</section>
-				<section  class="program-desc display-none" id="u-grad">
-					<h3>Undergraduate Programs</h3>
-					<p>Similar programs may have different names at different campuses. Try the search function for more comprehensive results.</p>
-					<p>Every effort is made to keep the information on this page current and accurate. However, in the rare event of a discrepancy between the information on this page and the calendar and/or program listing of the academic division, the divisional information is considered authoritative. Official calendars and course information can be found on the websites of each division/faculty (i.e., Applied Science and Engineering, Daniels Faculty of Architecture, Landscape and Design, Arts and Science, Kinesiology and Physical Education, Music, UTM, UTSC).</p>
-				</section>
-				<section  class="program-desc display-none" id="grad">
-					<h3>Graduate Programs</h3>
-					<p>Dive into your interests and develop your passions at U of T. We offer over 700 undergraduate and 200 graduate programs across three campuses in the Greater Toronto Area. From architecture to medicine, music to urban studies, we've got what you're looking for. </p>
-					<p>
-						The university makes every effort to keep this program list up to date. However, in the event of a conflict between the programs listed in a University of Toronto Academic Calendar and this list, the Calendar shall prevail. If you have any further questions about admissions and program offerings, please contact Enrolment Services. To update a program listing, please contact us via our Site Feedback form.
-					</p>
-				</section>
-			</div>
+				<!--these 3 sections: display non by default-->
+			<section  class="program-desc display-none" id="non-degree">
+				<h3>Non-Degree Studies</h3>
+				<p>Non-Degree Studies provides study options for unclassified, visiting and access studies students studying outside a UBC degree program.</p>
+				<p>Visiting, unclassified, and Access Studies students are part of Non-Degree Studies, which is for students taking UBC courses without pursuing a UBC degree. Non-Degree Studies is an option for you if:</p>
+				<ul>
+					<li>You have already completed a degree</li>
+					<li>You are completing an undergraduate degree at another institution</li>
+					<li>You want to take courses through distance education outside of a degree program</li>
+					<li>You want to take a course for professional upgrading</li>
+				</ul>
+			</section>
+			<section  class="program-desc display-none" id="u-grad">
+				<h3>Undergraduate Programs</h3>
+				<p>Similar programs may have different names at different campuses. Try the search function for more comprehensive results.</p>
+				<p>Every effort is made to keep the information on this page current and accurate. However, in the rare event of a discrepancy between the information on this page and the calendar and/or program listing of the academic division, the divisional information is considered authoritative. Official calendars and course information can be found on the websites of each division/faculty (i.e., Applied Science and Engineering, Daniels Faculty of Architecture, Landscape and Design, Arts and Science, Kinesiology and Physical Education, Music, UTM, UTSC).</p>
+			</section>
+			<section  class="program-desc display-none" id="grad">
+				<h3>Graduate Programs</h3>
+				<p>Dive into your interests and develop your passions at U of T. We offer over 700 undergraduate and 200 graduate programs across three campuses in the Greater Toronto Area. From architecture to medicine, music to urban studies, we've got what you're looking for. </p>
+				<p>
+					The university makes every effort to keep this program list up to date. However, in the event of a conflict between the programs listed in a University of Toronto Academic Calendar and this list, the Calendar shall prevail. If you have any further questions about admissions and program offerings, please contact Enrolment Services. To update a program listing, please contact us via our Site Feedback form.
+				</p>
+			</section>
 		</fieldset>
+		<!--text area for Research Interests -->
 		<fieldset>
 			<legend>Research Interests</legend>
 			<div class="form-center">
-				<textarea class="form form-item" name="research_interests" rows="5" placeholder="Research Interests"></textarea>
+				<textarea class="form form-item" name="research_interests" rows="5" placeholder="Research Interests" oninput="hideErrorStyle(this)"></textarea>
 			</div>
-			
 		</fieldset>
+
+		<!--errors appear here-->
+		<section id="errors"></section>
+		<!--Submit form-->
 		<button id="submit" type="submit">Submit</button>
 	</form>
-	<section id="errors"></section>
+
 </main>
 
+<!-- js form validation calls -->
 <script type="text/javascript" src="js/script.js"></script>
 
-<script>
-        validateForm.initForm(document.querySelector("#student-profile-form"));
+<script type="application/javascript">
+	/**
+	 *  form validation initials here*/
+	validateForm.initForm(document.querySelector("#student-profile-form"));
 </script>
 </body>
 </html>

@@ -6,7 +6,9 @@ html {
 */}
 /*body padding set*/
 body {
-	padding: 0 10px
+	padding: 0 10px;
+    background-image: url("/images/bg01.jpeg");
+    background-repeat: repeat;
 }
 
 /*Heasder h1 style*/
@@ -98,4 +100,15 @@ textarea {
 /*errors id block margin*/
 #errors {
     margin: 15px;
+}
+
+/*program degree style*/
+.program-degree {
+    background-color: white;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid;
 }
